@@ -3,8 +3,14 @@ package src;
 import java.util.LinkedList;
 
 public interface IAttributeDataset<T extends IAttributeDatum> {
+    // new method that adds a IAttributeDatum to the DataSet
+
     // all the attributes in the dataset
     public LinkedList<String> getAttributes();
+
+    // Helper function I added to get objects
+    public LinkedList<T> getObjects();
+
 
     // does every row/datum have the same value for the given attribute/column
     public boolean allSameValue(String ofAttribute);
